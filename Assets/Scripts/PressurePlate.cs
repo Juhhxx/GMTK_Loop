@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PressurePlate : MonoBehaviour
 {
@@ -6,6 +8,8 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] Sprite activatedPressurePlate;
     bool isPressed = false;
     [SerializeField] SpriteRenderer pressurePlateSprite;
+    [SerializeField] UnityEvent OnPressurePlateEntered;
+    [SerializeField] UnityEvent OnPressurePlateLeft;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (!isPressed)
