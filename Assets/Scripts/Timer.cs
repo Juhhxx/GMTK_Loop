@@ -7,6 +7,9 @@ public class Timer
     private float _maxTime;
     public float CurrentTime => _time;
 
+    public enum TimerReset { Automatic, Manual }
+    private TimerReset _timerReset;
+
     public event Action OnTimerDone;
 
     public void CountTimer()
@@ -18,7 +21,7 @@ public class Timer
         else if (_time <= 0)
         {
             OnTimerDone?.Invoke();
-            ResetTimer();
+            if (_timerReset == TimerReset.Automatic) ResetTimer();
         }
     }
     public void ResetTimer()
@@ -26,9 +29,10 @@ public class Timer
         _time = _maxTime;
     }
 
-    public Timer(float time)
+    public Timer(float time, TimerReset timerReset = TimerReset.Automatic)
     {
         _maxTime = time;
         _time = time;
+        _timerReset = timerReset;
     }
 }
