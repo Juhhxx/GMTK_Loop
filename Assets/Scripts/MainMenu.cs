@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     [SerializeField] string firstLevel;
     [SerializeField] Canvas startMenuCanvas;
@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     }
     public void OnOptionsClick()
     {
-        // Placeholder code.
         startMenuCanvas.gameObject.SetActive(false);
         optionMenuCanvas.gameObject.SetActive(true);
     }
