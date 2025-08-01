@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2746431745392681462}
   - component: {fileID: 3778172807461833765}
   - component: {fileID: -8226111538758226160}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 3096339019754110020}
   - component: {fileID: 327816608869893706}
   - component: {fileID: 7063640752428263950}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8379016259992299757}
   - component: {fileID: 8606180522377340143}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
