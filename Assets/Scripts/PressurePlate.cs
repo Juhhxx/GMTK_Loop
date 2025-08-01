@@ -17,6 +17,7 @@ public class PressurePlate : MonoBehaviour
             Debug.Log("Pressure Plate Activated!");
             isPressed = true;
             pressurePlateSprite.sprite = activatedPressurePlate;
+            OnPressurePlateEntered.Invoke();
         }
     }
     void OnTriggerExit2D(Collider2D collision)
@@ -26,6 +27,7 @@ public class PressurePlate : MonoBehaviour
             Debug.Log("Pressure Plate Deactivated!");
             isPressed = false;
             pressurePlateSprite.sprite = defaultPressurePlate;
+            OnPressurePlateLeft.Invoke();
         }
     }
 }
