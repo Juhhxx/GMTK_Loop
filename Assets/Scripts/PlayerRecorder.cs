@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerRecorder : MonoBehaviour
 {
@@ -18,6 +17,10 @@ public class PlayerRecorder : MonoBehaviour
     private bool    _isRecording;
     private List<GameObject> _shadows;
 
+    private void Awake()
+    {
+        _recordedSubject = FindAnyObjectByType<PlayerMovement>().gameObject;
+    }
     private void Start()
     {
         _recordedDatas = new List<List<PlayerRecorderData>>();
@@ -32,8 +35,10 @@ public class PlayerRecorder : MonoBehaviour
     {
         _updateTimer.CountTimer();
 
-        for (int i = 0; i < _recordedDatas.Count; i++)
-            Debug.Log($"Recorded lenght {i} : {_recordedDatas[i].Count}");
+        // for (int i = 0; i < _recordedDatas.Count; i++)
+        //     Debug.Log($"Recorded lenght {i} : {_recordedDatas[i].Count}");
+
+        Debug.Log($"Recorded lenght : {_recordedDatas.Count}");
 
         if (Input.GetKeyDown(KeyCode.P)) StartPlaying();
     }
@@ -45,21 +50,21 @@ public class PlayerRecorder : MonoBehaviour
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     private void StartPlaying()
     {
-        StartRecording();
-
         CleanShadows();
 
-        for (int i = 0; i < _shadowsRunning - 1 ; i++)
+        for (int i = 0; i < _shadowsRunning; i++)
         {
             GameObject newS = Instantiate(_shadowPrefab);
 
             ShadowMovement moveS = newS.GetComponent<ShadowMovement>();
 
-            moveS.StartMovement(_recordedDatas[i + 1]);
+            moveS.StartMovement(_recordedDatas[i]);
             moveS.SetID(i);
 
             _shadows.Add(newS);
         }
+
+        StartRecording();
     }
 
     private void CleanShadows()
@@ -68,7 +73,6 @@ public class PlayerRecorder : MonoBehaviour
 
         foreach (GameObject shadow in _shadows)
         {
-            shadow.transform.DOKill();
             Destroy(shadow);
         }
 
@@ -77,17 +81,25 @@ public class PlayerRecorder : MonoBehaviour
 
     private void StartRecording()
     {
-        // Create new Queue to save positions
-        _recordedDatas.Insert(0, new List<PlayerRecorderData>());
+        CreateRecordingSlot();
 
         _isRecording = true;
 
-        // If max number of shadows hasn't been reached then add 1 to max shadows
-        if (_shadowsRunning <= _maxShadows) _shadowsRunning++;
-        // If else, remove the one saved for the longest
-        else _recordedDatas.RemoveAt(2);
-
         Debug.Log($"shadowsRunning : {_shadowsRunning}");
+    }
+    private void CreateRecordingSlot()
+    {
+        // Create new Queue to save positions
+        _recordedDatas.Insert(0, new List<PlayerRecorderData>());
+
+        Debug.Log($"Recordings saved : {_recordedDatas.Count}");
+
+        // If max number of shadows hasn't been reached then add 1 to max shadows
+        // If else, remove the one saved for the longest
+        if (_recordedDatas.Count <= _maxShadows) _shadowsRunning++;
+        else _recordedDatas.RemoveAt(3);
+
+        Debug.Log($"Recordings saved 2 : {_recordedDatas.Count}");
     }
     private void Record()
     {

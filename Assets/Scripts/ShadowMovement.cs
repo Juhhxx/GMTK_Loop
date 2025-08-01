@@ -20,6 +20,8 @@ public class ShadowMovement : MonoBehaviour
     }
     private void OnDestroy()
     {
+        transform.DOKill();
+
         Destroy(_target);
     }
 
@@ -27,10 +29,10 @@ public class ShadowMovement : MonoBehaviour
 
     public void StartMovement(List<PlayerRecorderData> data)
     {
-        // _movementData = OptimizePath(data);
-        _movementData = new Queue<PlayerRecorderData>(data);
+        _movementData = OptimizePath(data);
+        // _movementData = new Queue<PlayerRecorderData>(data);
 
-        Debug.Log($"lenght : {data.Count} and {_movementData.Count}");
+        // Debug.Log($"lenght : {data.Count} and {_movementData.Count}");
 
         _lastData = _movementData.Dequeue();
 

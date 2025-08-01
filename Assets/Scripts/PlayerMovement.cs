@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -32,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
         MovementX();
         Jump();
         ApplyMovement(_velocity);
+    }
+
+    private void KillSelf()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void MovementX()
