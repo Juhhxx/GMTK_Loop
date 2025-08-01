@@ -45,14 +45,14 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetButtonDown("Jump")) && (_isGrounded))
         {
             _velocity.y = _jumpSpeed;
-            _rb.gravityScale = 1.0f;
+            _rb.gravityScale = _jumpGravity;
             _jumpTime = Time.time;
         }
         else if ((Input.GetButton("Jump")) && ((Time.time - _jumpTime) < _maxJumpTime))
         {
-            _rb.gravityScale = 1.0f;
+            _rb.gravityScale = _jumpGravity;
         }
-        else
+        else if (_rb.linearVelocity.y < 0f)
         {
             _rb.gravityScale = _defaultGravity;
         }
