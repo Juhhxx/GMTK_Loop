@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 401709369}
   - component: {fileID: 401709372}
   - component: {fileID: 401709371}
-  - component: {fileID: 401709370}
+  - component: {fileID: 401709373}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -739,33 +739,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 611837830}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &401709370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401709368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f9f1b52f1d048f419fffdae1fe6bab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteraction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 401709371}
-        m_TargetAssemblyTypeName: Lever, Assembly-CSharp
-        m_MethodName: LeverFlipped
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &401709371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,6 +760,8 @@ MonoBehaviour:
   OnLeverOn:
     m_PersistentCalls:
       m_Calls: []
+  interactKey: 101
+  rb2d: {fileID: 726017617}
 --- !u!212 &401709372
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -842,6 +817,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &401709373
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401709368}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2, y: 3.2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.2, y: 3.2}
+  m_EdgeRadius: 0
 --- !u!1 &580587155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,24 +1136,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &726017615 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4584374965864392604, guid: 42c347be030da8d438dce2d68e1711ba, type: 3}
+--- !u!50 &726017617 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4773159468849857131, guid: 42c347be030da8d438dce2d68e1711ba, type: 3}
   m_PrefabInstance: {fileID: 2136287800}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &726017620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726017615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f898d3b04e417a64ca3fb0f55636ae85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactKey: 0
 --- !u!1 &1005948118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,10 +2171,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4584374965864392604, guid: 42c347be030da8d438dce2d68e1711ba, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 726017620}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42c347be030da8d438dce2d68e1711ba, type: 3}
 --- !u!1001 &6520481127560377439
 PrefabInstance:
