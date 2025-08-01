@@ -16,11 +16,14 @@ public class PlayerMovement : MonoBehaviour
     private float _jumpTime;
     private float _defaultGravity;
     private bool _isGrounded;
+    private Animator _anim;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _defaultGravity = _rb.gravityScale;
+
+        _anim = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -32,11 +35,19 @@ public class PlayerMovement : MonoBehaviour
         MovementX();
         Jump();
         ApplyMovement(_velocity);
+
+        KillSelf();
+
+        _anim.SetFloat("SpeedX", Mathf.Abs(_velocity.x));
+
+        if ((_velocity.x < 0) && (transform.right.x > 0)) transform.rotation = Quaternion.Euler(0, 180, 0);
+        else if ((_velocity.x > 0) && (transform.right.x < 0)) transform.rotation = Quaternion.identity;
     }
 
     private void KillSelf()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (Input.GetKeyDown(KeyCode.O))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void MovementX()

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRecorder : MonoBehaviour
 {
@@ -19,6 +19,7 @@ public class PlayerRecorder : MonoBehaviour
 
     private void Awake()
     {
+        SceneManager.sceneLoaded += (Scene scene, LoadSceneMode mode) =>
         _recordedSubject = FindAnyObjectByType<PlayerMovement>().gameObject;
     }
     private void Start()
@@ -48,7 +49,7 @@ public class PlayerRecorder : MonoBehaviour
     }
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
-    private void StartPlaying()
+    public void StartPlaying()
     {
         CleanShadows();
 

@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
@@ -13,9 +11,12 @@ public class ShadowMovement : MonoBehaviour
     private Queue<PlayerRecorderData> _movementData;
     private PlayerRecorderData _lastData;
     private int _id;
+    private Animator _anim;
 
     private void Start()
     {
+        _anim = GetComponent<Animator>();
+
         GetComponentInChildren<TextMeshPro>().text = $"{_id}";
     }
     private void OnDestroy()
@@ -77,21 +78,27 @@ public class ShadowMovement : MonoBehaviour
 
     private void DoMovement()
     {
+        if (_movementData.Count == 0)
+        {
+            _anim?.SetFloat("SpeedX", 0);
+            return;
+        }
+
         PlayerRecorderData data = _movementData.Dequeue();
 
         Vector2 endPoint = data.Position;
 
         float timeDuration = data.Time - _lastData.Time;
+        float velocityX = (endPoint.x - transform.position.x) / timeDuration;
+        float velocityY = (endPoint.y - transform.position.y) / timeDuration;
+
+        _anim?.SetFloat("SpeedX", Mathf.Abs(velocityX));
 
         _lastData = data;
 
-        transform.DOMove(endPoint, timeDuration).SetEase(Ease.Linear).OnComplete(ContinueMovement);
-    }
-    private void ContinueMovement()
-    {
-        if (_movementData.Count == 0) return;
-        
-        StopAllCoroutines();
-        DoMovement();
+        if (endPoint.x - transform.position.x > 0) transform.rotation = Quaternion.identity;
+        else if (endPoint.x - transform.position.x < 0) transform.rotation = Quaternion.Euler(0, 180, 0);
+
+        transform.DOMove(endPoint, timeDuration).SetEase(Ease.Linear).OnComplete(DoMovement);
     }
 }
