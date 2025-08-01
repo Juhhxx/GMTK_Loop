@@ -52,7 +52,12 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.gravityScale = _jumpGravity;
         }
-        else if (_rb.linearVelocity.y < 0f)
+        else
+        {
+            _rb.gravityScale = _defaultGravity;
+        }
+        
+        if (_rb.linearVelocity.y < 0f)
         {
             _rb.gravityScale = _defaultGravity;
         }
