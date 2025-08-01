@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 60809718800879809}
   - component: {fileID: 3778172807461833765}
   - component: {fileID: -8226111538758226160}
+  - component: {fileID: 5628465353089881700}
   m_Layer: 7
   m_Name: Shadow
   m_TagString: Untagged
@@ -98,6 +99,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetPrefab: {fileID: 3784625963058718734, guid: 8787ec62c28f68a45a0b23031f157bfa, type: 3}
+--- !u!70 &5628465353089881700
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524278942547392975}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.55}
+  m_Size: {x: 0.4, y: 1.1}
+  m_Direction: 0
 --- !u!1 &5699144838978846716
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,12 +388,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 3358541013563233973, guid: 38cd8d2ddeeee674cac49a42cdc739b3, type: 3}
+  m_Sprite: {fileID: 3358541013563233973, guid: 1f73af9022167bb4782cac35c22764d0, type: 3}
   m_Color: {r: 0.6182974, g: 0.014684939, b: 0.6226415, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
