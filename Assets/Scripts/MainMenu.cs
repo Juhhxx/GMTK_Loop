@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using NaughtyAttributes;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] string firstLevel;
+    [SerializeField][Scene] string firstLevel;
+
     public void OnStartClick()
     {
         SceneManager.LoadScene(firstLevel);
