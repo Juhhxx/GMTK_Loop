@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Juliatests.unity
     guid: 07fe90e7321feac4aaaacf94c58bab46
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 253338b5a58518d42a65e9bc138193f1
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 5879413333b3ea848a5291801e330570
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
