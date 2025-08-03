@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private UnityEvent _onStartButton;
+    [SerializeField] public UnityEvent _onStartButton;
 
     public void OnStartClick()
     {

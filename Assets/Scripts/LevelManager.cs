@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviourDDOL<LevelManager>
     [SerializeField] private LevelEnd _levelEnd;
     private LevelProfile _currentLevel;
     private Queue<LevelProfile> _levelQueue;
+    private MainMenu mainMenu;
 
     private void Awake()
     {
@@ -73,12 +74,15 @@ public class LevelManager : MonoBehaviourDDOL<LevelManager>
     {
         _levelEnd = FindAnyObjectByType<LevelEnd>();
         _player = FindAnyObjectByType<PlayerMovement>();
+        mainMenu = FindAnyObjectByType<MainMenu>();
 
+        mainMenu?._onStartButton.AddListener(GoToNextLevel);
         _levelEnd?.OnPlayerReachEnd.AddListener(GoToNextLevel);
         _player?.OnPlayerDeath.AddListener(() => StartCoroutine(RestartLevelCR()));
     }
     private void TurnOffEvents()
     {
+        mainMenu?._onStartButton.RemoveListener(GoToNextLevel);
         _levelEnd?.OnPlayerReachEnd?.RemoveListener(GoToNextLevel);
         _player?.OnPlayerDeath?.RemoveListener(() => StartCoroutine(RestartLevelCR()));
     }
