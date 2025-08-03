@@ -13,12 +13,12 @@ public class PressurePlate : MonoBehaviour
     {
         Debug.Log("Pressure Plate Activated!");
         pressurePlateSprite.sprite = activatedPressurePlate;
-        OnPressurePlateEntered.Invoke();
+        OnPressurePlateEntered?.Invoke();
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("Pressure Plate Deactivated!");
         pressurePlateSprite.sprite = defaultPressurePlate;
-        OnPressurePlateLeft.Invoke();
+        OnPressurePlateLeft?.Invoke();
     }
 }

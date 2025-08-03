@@ -67,12 +67,12 @@ public class LevelManager : MonoBehaviourDDOL<LevelManager>
         _levelEnd = FindAnyObjectByType<LevelEnd>();
         _player = FindAnyObjectByType<PlayerMovement>();
 
-        _levelEnd.OnPlayerReachEnd.AddListener(GoToNextLevel);
-        _player.OnPlayerDeath.AddListener(() => StartCoroutine(RestartLevelCR()));
+        _levelEnd?.OnPlayerReachEnd.AddListener(GoToNextLevel);
+        _player?.OnPlayerDeath.AddListener(() => StartCoroutine(RestartLevelCR()));
     }
     private void TurnOffEvents()
     {
-        _levelEnd.OnPlayerReachEnd.RemoveListener(GoToNextLevel);
-        _player.OnPlayerDeath.RemoveListener(() => StartCoroutine(RestartLevelCR()));
+        _levelEnd?.OnPlayerReachEnd?.RemoveListener(GoToNextLevel);
+        _player?.OnPlayerDeath?.RemoveListener(() => StartCoroutine(RestartLevelCR()));
     }
 }

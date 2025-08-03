@@ -23,7 +23,7 @@ public class PlayerRecorder : MonoBehaviourDDOL<PlayerRecorder>
         SingletonCheck(this);
 
         SceneManager.sceneLoaded += (Scene scene, LoadSceneMode mode) =>
-        _recordedSubject = FindAnyObjectByType<PlayerMovement>().gameObject;
+        _recordedSubject = FindAnyObjectByType<PlayerMovement>()?.gameObject;
     }
     private void Start()
     {
