@@ -32,7 +32,7 @@ public class LevelManager : MonoBehaviourDDOL<LevelManager>
     }
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
-    private void GoToNextLevel()
+    public void GoToNextLevel()
     {
         LevelProfile level = _levelQueue.Dequeue();
         Debug.Log($"GOING TO LEVEL {level}");

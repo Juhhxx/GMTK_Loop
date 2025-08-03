@@ -1,0 +1,883 @@
+fileFormatVersion: 2
+guid: c32f23dba558097438a5976b62fa3844
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9082889970928740144
+    second: gmtk_all_tilset2_scaled_5x_pngcrushed_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0376a2b2e48ec0e70800000000000000
+      internalID: 9082889970928740144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 800
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: -80}
+        - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a9fdedd00c6c247b0044a057f4e4ed
+      internalID: 913521899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 800
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2146008fb2aee324e93fe72035e3804f
+      internalID: -225074076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_3
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 800
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1347409b08ae62748ba423722e23a247
+      internalID: -101397361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23723509cd44e5e4b8dafb28fe009079
+      internalID: 1199957694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 640
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9811b3de90304c544992ec53e54bfb0f
+      internalID: 605249958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_6
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc82456ea8480243a575328ff5294ff
+      internalID: -83133358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: db93e3362e575734db0ff6ef11bc2eda
+      internalID: 1486420619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70273214e7124fb4e89619e36aa1dbb9
+      internalID: -11867259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37f1765be62f4149a6164f71f3a1d94
+      internalID: 2144858289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 480
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de33b41c6b726149a2cdb8863ee94c0
+      internalID: -1127133444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1a7c9b7b7364642855c5155d71f260
+      internalID: -1737294563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f0ef6a7db3b2742bc4e59c637c6d0c
+      internalID: -1138751112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4badc8ed24ba784ba2e64c7f1b80c7d
+      internalID: -810721844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_14
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 16}
+        - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde5b7a7593a77d46b0b8c883748ee98
+      internalID: -705890959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_15
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ce0510e38d060488f210d95bf56a3e
+      internalID: 1108481522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_16
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5565bff84456e854fa07fe8a6343b2bd
+      internalID: -513367664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e084f44b0be6d740aef5cb844b1188e
+      internalID: 509145799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a210184f391a74cb12e302c33b2994
+      internalID: -2104276073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_19
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad13848fb7ad8ec40ad336c652d3b7e2
+      internalID: -1300703660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_20
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -43, y: 80}
+        - {x: -43, y: 15}
+        - {x: 80, y: 15}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c81e11a8cc195c48b20486bd6a00326
+      internalID: -249155388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 14}
+        - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: 13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43748f672f576f64d9b2b439f79c4ba7
+      internalID: -1685977320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_22
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 63, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: 22}
+        - {x: 63, y: 20}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3d3c7878aa819418e6be749773a347
+      internalID: -1782372116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+        - {x: 80, y: 80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c5932899df2bc4fb67d7522b096854
+      internalID: -1796279314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_24
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+        - {x: 80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab4bbb18fd7b084ea0a1909f9cca3ea
+      internalID: 20747110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_25
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: -80}
+        - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9081c2fb4641a74d975dfd7cb842c5d
+      internalID: -1394085865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_26
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: -80}
+        - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a427554c8217a349b304aa0b95c4a6f
+      internalID: -301833897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_27
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: -80}
+        - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6b45900e2a2b14c96cd715cb29168f
+      internalID: -1277555076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmtk_all_tilset2_scaled_5x_pngcrushed_28
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 80, y: -80}
+        - {x: 80, y: 80}
+        - {x: -80, y: 80}
+        - {x: -80, y: -80}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9efadfa8d8a54248a495ce2682a2ce2
+      internalID: 400072017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5085383dfe9d89349a03ea97c9ed1890
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gmtk_all_tilset2_scaled_5x_pngcrushed_0: 9082889970928740144
+      gmtk_all_tilset2_scaled_5x_pngcrushed_1: 913521899
+      gmtk_all_tilset2_scaled_5x_pngcrushed_10: -1127133444
+      gmtk_all_tilset2_scaled_5x_pngcrushed_11: -1737294563
+      gmtk_all_tilset2_scaled_5x_pngcrushed_12: -1138751112
+      gmtk_all_tilset2_scaled_5x_pngcrushed_13: -810721844
+      gmtk_all_tilset2_scaled_5x_pngcrushed_14: -705890959
+      gmtk_all_tilset2_scaled_5x_pngcrushed_15: 1108481522
+      gmtk_all_tilset2_scaled_5x_pngcrushed_16: -513367664
+      gmtk_all_tilset2_scaled_5x_pngcrushed_17: 509145799
+      gmtk_all_tilset2_scaled_5x_pngcrushed_18: -2104276073
+      gmtk_all_tilset2_scaled_5x_pngcrushed_19: -1300703660
+      gmtk_all_tilset2_scaled_5x_pngcrushed_2: -225074076
+      gmtk_all_tilset2_scaled_5x_pngcrushed_20: -249155388
+      gmtk_all_tilset2_scaled_5x_pngcrushed_21: -1685977320
+      gmtk_all_tilset2_scaled_5x_pngcrushed_22: -1782372116
+      gmtk_all_tilset2_scaled_5x_pngcrushed_23: -1796279314
+      gmtk_all_tilset2_scaled_5x_pngcrushed_24: 20747110
+      gmtk_all_tilset2_scaled_5x_pngcrushed_25: -1394085865
+      gmtk_all_tilset2_scaled_5x_pngcrushed_26: -301833897
+      gmtk_all_tilset2_scaled_5x_pngcrushed_27: -1277555076
+      gmtk_all_tilset2_scaled_5x_pngcrushed_28: 400072017
+      gmtk_all_tilset2_scaled_5x_pngcrushed_3: -101397361
+      gmtk_all_tilset2_scaled_5x_pngcrushed_4: 1199957694
+      gmtk_all_tilset2_scaled_5x_pngcrushed_5: 605249958
+      gmtk_all_tilset2_scaled_5x_pngcrushed_6: -83133358
+      gmtk_all_tilset2_scaled_5x_pngcrushed_7: 1486420619
+      gmtk_all_tilset2_scaled_5x_pngcrushed_8: -11867259
+      gmtk_all_tilset2_scaled_5x_pngcrushed_9: 2144858289
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
