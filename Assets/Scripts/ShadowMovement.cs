@@ -73,8 +73,8 @@ public class ShadowMovement : MonoBehaviour
             }
 
             // Ignore points between two equal points
-                if (data[i - 1].Position == data[i].Position &&
-                    data[i + 1].Position == data[i].Position) continue;
+            if (data[i - 1].Position == data[i].Position &&
+                data[i + 1].Position == data[i].Position) continue;
 
             // // Ignore points between two equal x values
             // if (data[i - 1].Position.x == data[i].Position.x &&
@@ -117,6 +117,8 @@ public class ShadowMovement : MonoBehaviour
         else if (endPoint.x - transform.position.x < 0) transform.rotation = Quaternion.Euler(0, 180, 0);
 
         transform.DOMove(endPoint, timeDuration).SetEase(Ease.Linear).OnComplete(DoMovement);
+
+        if (_movementData.Count == 0) _anim?.SetTrigger("Die");
     }
 
     private void CheckIfGrounded()

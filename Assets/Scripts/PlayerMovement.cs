@@ -53,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
     public void KillSelf()
     {
         Debug.Log("PLAYR DIED!!!");
+        
+        _anim.SetTrigger("Die");
         OnPlayerDeath.Invoke();
     }
 

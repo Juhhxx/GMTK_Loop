@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using NaughtyAttributes;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -53,6 +51,12 @@ public class LevelManager : MonoBehaviourDDOL<LevelManager>
         _recorder.SetMaxShadows(level.MaxShadowsAllowed);
         _recorder.ResetRecordings();
     }
+    private IEnumerator RestartLevelCR()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        RestartLevel();
+    }
     public async void RestartLevel()
     {
         await SceneManager.LoadSceneAsync(_currentLevel.LevelScene);
@@ -64,11 +68,11 @@ public class LevelManager : MonoBehaviourDDOL<LevelManager>
         _player = FindAnyObjectByType<PlayerMovement>();
 
         _levelEnd.OnPlayerReachEnd.AddListener(GoToNextLevel);
-        _player.OnPlayerDeath.AddListener(RestartLevel);
+        _player.OnPlayerDeath.AddListener(() => StartCoroutine(RestartLevelCR()));
     }
     private void TurnOffEvents()
     {
         _levelEnd.OnPlayerReachEnd.RemoveListener(GoToNextLevel);
-        _player.OnPlayerDeath.RemoveListener(RestartLevel);
+        _player.OnPlayerDeath.RemoveListener(() => StartCoroutine(RestartLevelCR()));
     }
 }

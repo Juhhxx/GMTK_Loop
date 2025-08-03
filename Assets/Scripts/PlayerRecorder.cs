@@ -44,7 +44,7 @@ public class PlayerRecorder : MonoBehaviourDDOL<PlayerRecorder>
 
         if (Input.GetKeyDown(KeyCode.P)) StartPlaying();
 
-        if (Input.GetButtonDown("Interact")) Record();
+        if (Input.GetButtonDown("Interact") && _isRecording) Record();
     }
     private void TimedUpdate()
     {
