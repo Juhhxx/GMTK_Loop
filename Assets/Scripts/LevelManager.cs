@@ -36,10 +36,11 @@ public class LevelManager : MonoBehaviourDDOL<LevelManager>
     {
         if (_levelQueue.Count == 0)
         {
+            _levelQueue = new Queue<LevelProfile>(_levels);
             SceneManager.LoadScene("MainMenu");
             return;
         }
-        
+
         LevelProfile level = _levelQueue.Dequeue();
         Debug.Log($"GOING TO LEVEL {level}");
         _ = LoadLevel(level);
