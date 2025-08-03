@@ -8,9 +8,13 @@ public struct PlayerRecorderData
     private float _time;
     public float Time => _time;
 
-    public PlayerRecorderData(Vector2 position, float time)
+    private bool _interacted;
+    public bool Interacted => _interacted;
+
+    public PlayerRecorderData(Vector2 position, float time, bool interacted)
     {
         _position = position;
         _time = time;
+        _interacted = interacted;
     }
 }

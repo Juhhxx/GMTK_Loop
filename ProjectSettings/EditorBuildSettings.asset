@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Mafalda.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 09cecc2127494a14ba37d8dfb39c31d1
   - enabled: 1
     path: Assets/Scenes/Juliatests.unity

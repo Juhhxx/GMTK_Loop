@@ -42,6 +42,8 @@ public class PlayerRecorder : MonoBehaviour
         Debug.Log($"Recorded lenght : {_recordedDatas.Count}");
 
         if (Input.GetKeyDown(KeyCode.P)) StartPlaying();
+
+        if (Input.GetButtonDown("Interact")) Record();
     }
     private void TimedUpdate()
     {
@@ -107,7 +109,8 @@ public class PlayerRecorder : MonoBehaviour
         Debug.Log("RECORDING");
 
         PlayerRecorderData data =
-        new PlayerRecorderData(_recordedSubject.transform.position, Time.time);
+        new PlayerRecorderData(_recordedSubject.transform.position, Time.time,
+        Input.GetButtonDown("Interact"));
 
         _recordedDatas[0].Add(data);
     }
