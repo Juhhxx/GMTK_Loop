@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using NaughtyAttributes;
+using UnityEngine.Events;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField][Scene] string firstLevel;
+    [SerializeField] private UnityEvent _onStartButton;
 
     public void OnStartClick()
     {
-        SceneManager.LoadScene(firstLevel);
+        _onStartButton?.Invoke();
     }
     public void OnExitClick()
     {
