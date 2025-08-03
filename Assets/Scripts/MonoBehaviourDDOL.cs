@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class DontDestroyOnLoad : MonoBehaviour
+public abstract class MonoBehaviourDDOL<T> : MonoBehaviour
 {
-    private static DontDestroyOnLoad Instance;
+    private static T Instance;
 
-    private void Awake()
+    protected void SingletonCheck(T obj)
     {
         if (Instance == null)
         {
-            Instance = this;
+            Instance = obj;
             DontDestroyOnLoad(gameObject);
         }
         else

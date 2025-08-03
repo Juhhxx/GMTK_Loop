@@ -7,6 +7,7 @@ public class Hazards : MonoBehaviour
         PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
         if (playerMovement != null)
         {
+            Debug.Log("PLAYER IN HAZARD");
             playerMovement.KillSelf();
         }
     }

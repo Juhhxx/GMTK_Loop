@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using System.Linq;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerRecorder : MonoBehaviour
+public class PlayerRecorder : MonoBehaviourDDOL<PlayerRecorder>
 {
     [SerializeField] private GameObject _recordedSubject;
     [SerializeField] private GameObject _shadowPrefab;
@@ -19,6 +20,8 @@ public class PlayerRecorder : MonoBehaviour
 
     private void Awake()
     {
+        SingletonCheck(this);
+
         SceneManager.sceneLoaded += (Scene scene, LoadSceneMode mode) =>
         _recordedSubject = FindAnyObjectByType<PlayerMovement>().gameObject;
     }
@@ -29,8 +32,6 @@ public class PlayerRecorder : MonoBehaviour
 
         _updateTimer = new Timer(_recordingRate);
         _updateTimer.OnTimerDone += TimedUpdate;
-
-        StartRecording();
     }
     private void Update()
     {
@@ -49,6 +50,8 @@ public class PlayerRecorder : MonoBehaviour
     {
         if (_isRecording) Record();
     }
+
+    public void SetMaxShadows(int max) => _maxShadows = max;
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     public void StartPlaying()
@@ -69,7 +72,6 @@ public class PlayerRecorder : MonoBehaviour
 
         StartRecording();
     }
-
     private void CleanShadows()
     {
         if (_shadows.Count == 0) return;
@@ -84,11 +86,19 @@ public class PlayerRecorder : MonoBehaviour
 
     private void StartRecording()
     {
+        Debug.Log($"shadowsRunning 1 : {_shadowsRunning}");
         CreateRecordingSlot();
 
         _isRecording = true;
 
-        Debug.Log($"shadowsRunning : {_shadowsRunning}");
+        Debug.Log($"shadowsRunning 2 : {_shadowsRunning}");
+    }
+    public void ResetRecordings()
+    {
+        _isRecording = false;
+        _recordedDatas.Clear();
+        _shadowsRunning = 0;
+        StartRecording();
     }
     private void CreateRecordingSlot()
     {
@@ -100,7 +110,7 @@ public class PlayerRecorder : MonoBehaviour
         // If max number of shadows hasn't been reached then add 1 to max shadows
         // If else, remove the one saved for the longest
         if (_recordedDatas.Count <= _maxShadows) _shadowsRunning++;
-        else _recordedDatas.RemoveAt(3);
+        else _recordedDatas.Remove(_recordedDatas.Last());
 
         Debug.Log($"Recordings saved 2 : {_recordedDatas.Count}");
     }

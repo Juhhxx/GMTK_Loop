@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _groundCheckDistance = 1f;
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private bool _debugDrawn = false;
-    [SerializeField] private UnityEvent onPlayerDeath;
+
+    public UnityEvent OnPlayerDeath;
 
     private Rigidbody2D _rb;
     private Vector2 _velocity;
@@ -38,7 +39,8 @@ public class PlayerMovement : MonoBehaviour
         Jump();
         ApplyMovement(_velocity);
 
-        KillSelf();
+        if (Input.GetKeyDown(KeyCode.O))
+            KillSelf();
 
         _anim.SetFloat("SpeedX", Mathf.Abs(_velocity.x));
         _anim.SetFloat("SpeedY", _velocity.y);
@@ -50,10 +52,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void KillSelf()
     {
-        if (Input.GetKeyDown(KeyCode.O))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-        onPlayerDeath.Invoke();
+        Debug.Log("PLAYR DIED!!!");
+        OnPlayerDeath.Invoke();
     }
 
     private void MovementX()
