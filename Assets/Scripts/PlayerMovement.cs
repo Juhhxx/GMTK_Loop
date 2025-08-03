@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
         KillSelf();
 
         _anim.SetFloat("SpeedX", Mathf.Abs(_velocity.x));
+        _anim.SetFloat("SpeedY", _velocity.y);
+        _anim.SetBool("IsGrounded", _isGrounded);
 
         if ((_velocity.x < 0) && (transform.right.x > 0)) transform.rotation = Quaternion.Euler(0, 180, 0);
         else if ((_velocity.x > 0) && (transform.right.x < 0)) transform.rotation = Quaternion.identity;

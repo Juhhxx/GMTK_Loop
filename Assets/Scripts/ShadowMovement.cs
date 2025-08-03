@@ -7,17 +7,31 @@ using UnityEngine;
 public class ShadowMovement : MonoBehaviour
 {
     [SerializeField] private GameObject _targetPrefab;
+    [SerializeField] private bool _spawnTarget;
+    [SerializeField] private bool _showId;
+    [SerializeField] private string _interactiveDebug;
+
     private GameObject _target;
     private Queue<PlayerRecorderData> _movementData;
     private PlayerRecorderData _lastData;
     private int _id;
     private Animator _anim;
+    private Interactive _currentInteractive;
+    private bool _isGrounded;
+    [SerializeField] private LayerMask _groundLayer;
 
     private void Start()
     {
         _anim = GetComponent<Animator>();
 
-        GetComponentInChildren<TextMeshPro>().text = $"{_id}";
+        TextMeshPro tmp = GetComponentInChildren<TextMeshPro>();
+
+        if (_showId) tmp.text = $"{_id}";
+        else tmp.gameObject.SetActive(false);
+    }
+    private void Update()
+    {
+        CheckIfGrounded();
     }
     private void OnDestroy()
     {
@@ -41,9 +55,9 @@ public class ShadowMovement : MonoBehaviour
 
         DoMovement();
 
-        _target = Instantiate(_targetPrefab, data.Last().Position, Quaternion.identity);
+        if (_spawnTarget)
+            _target = Instantiate(_targetPrefab, data.Last().Position, Quaternion.identity);
     }
-
     private Queue<PlayerRecorderData> OptimizePath(List<PlayerRecorderData> data)
     {
         List<PlayerRecorderData> path = new List<PlayerRecorderData>();
@@ -52,15 +66,15 @@ public class ShadowMovement : MonoBehaviour
         for (int i = 0; i < dataSize; i++)
         {
             // Ignore first and last point
-            if (i == 0 || i == dataSize - 1)
+            if (i == 0 || i == dataSize - 1 || data[i].Interacted)
             {
                 path.Add(data[i]);
                 continue;
             }
 
             // Ignore points between two equal points
-            if (data[i - 1].Position == data[i].Position &&
-                data[i + 1].Position == data[i].Position) continue;
+                if (data[i - 1].Position == data[i].Position &&
+                    data[i + 1].Position == data[i].Position) continue;
 
             // // Ignore points between two equal x values
             // if (data[i - 1].Position.x == data[i].Position.x &&
@@ -75,7 +89,6 @@ public class ShadowMovement : MonoBehaviour
 
         return new Queue<PlayerRecorderData>(path);
     }
-
     private void DoMovement()
     {
         if (_movementData.Count == 0)
@@ -86,6 +99,8 @@ public class ShadowMovement : MonoBehaviour
 
         PlayerRecorderData data = _movementData.Dequeue();
 
+        if (data.Interacted) DoInteraction();
+
         Vector2 endPoint = data.Position;
 
         float timeDuration = data.Time - _lastData.Time;
@@ -93,6 +108,8 @@ public class ShadowMovement : MonoBehaviour
         float velocityY = (endPoint.y - transform.position.y) / timeDuration;
 
         _anim?.SetFloat("SpeedX", Mathf.Abs(velocityX));
+        _anim?.SetFloat("SpeedY", velocityY);
+        _anim?.SetBool("IsGrounded", _isGrounded);
 
         _lastData = data;
 
@@ -100,5 +117,35 @@ public class ShadowMovement : MonoBehaviour
         else if (endPoint.x - transform.position.x < 0) transform.rotation = Quaternion.Euler(0, 180, 0);
 
         transform.DOMove(endPoint, timeDuration).SetEase(Ease.Linear).OnComplete(DoMovement);
+    }
+
+    private void CheckIfGrounded()
+    {
+        _isGrounded = Physics2D.Raycast(transform.position,
+        Vector3.down, 0.2f, _groundLayer);
+    }
+
+    // Interaction
+    private void DoInteraction()
+    {
+        if (_currentInteractive != null)
+        {
+            _currentInteractive.Interaction();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Interactive interactive = collision.GetComponent<Interactive>();
+
+        if (interactive != null && interactive != _currentInteractive)
+        {
+            _currentInteractive = interactive;
+            _interactiveDebug = interactive.gameObject.name;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        _currentInteractive = null;
+        _interactiveDebug = "None";
     }
 }
