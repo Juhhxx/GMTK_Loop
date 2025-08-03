@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2746431745392681462}
   - component: {fileID: 60809718800879809}
   - component: {fileID: 3778172807461833765}
-  - component: {fileID: -8226111538758226160}
   - component: {fileID: 5628465353089881700}
+  - component: {fileID: -8226111538758226160}
   m_Layer: 7
   m_Name: Shadow
   m_TagString: Untagged
@@ -86,19 +86,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-8226111538758226160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524278942547392975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58b2683bd6f9b1746bbe8b8eaac0927c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetPrefab: {fileID: 3784625963058718734, guid: 8787ec62c28f68a45a0b23031f157bfa, type: 3}
 --- !u!70 &5628465353089881700
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -136,6 +123,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.55}
   m_Size: {x: 0.4, y: 1.1}
   m_Direction: 0
+--- !u!114 &-8226111538758226160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524278942547392975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b2683bd6f9b1746bbe8b8eaac0927c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetPrefab: {fileID: 3784625963058718734, guid: 8787ec62c28f68a45a0b23031f157bfa, type: 3}
+  _spawnTarget: 1
+  _showId: 0
+  _interactiveDebug: 
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &5699144838978846716
 GameObject:
   m_ObjectHideFlags: 0
