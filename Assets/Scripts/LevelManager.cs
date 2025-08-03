@@ -34,6 +34,12 @@ public class LevelManager : MonoBehaviourDDOL<LevelManager>
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     public void GoToNextLevel()
     {
+        if (_levelQueue.Count == 0)
+        {
+            SceneManager.LoadScene("MainMenu");
+            return;
+        }
+        
         LevelProfile level = _levelQueue.Dequeue();
         Debug.Log($"GOING TO LEVEL {level}");
         _ = LoadLevel(level);
