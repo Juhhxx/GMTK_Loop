@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _groundCheckDistance = 1f;
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private bool _debugDrawn = false;
+    [SerializeField] private UnityEvent onPlayerDeath;
 
     private Rigidbody2D _rb;
     private Vector2 _velocity;
@@ -46,10 +48,12 @@ public class PlayerMovement : MonoBehaviour
         else if ((_velocity.x > 0) && (transform.right.x < 0)) transform.rotation = Quaternion.identity;
     }
 
-    private void KillSelf()
+    public void KillSelf()
     {
         if (Input.GetKeyDown(KeyCode.O))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        onPlayerDeath.Invoke();
     }
 
     private void MovementX()

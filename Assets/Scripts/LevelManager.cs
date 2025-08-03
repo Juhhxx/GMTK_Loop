@@ -1,16 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField][Expandable] private List<LevelProfile> _levels;
+    [SerializeField] private PlayerRecorder _recorder;
 
-    // Update is called once per frame
-    void Update()
+    private LevelProfile _currentLevel;
+
+    private void LoadLevel()
     {
-        
+
+    }
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(_currentLevel.LevelScene);
+        // SceneManager.sceneLoaded
     }
 }
